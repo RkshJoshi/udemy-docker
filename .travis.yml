@@ -6,4 +6,4 @@ before_install:
   - docker build -t rkshjoshi\udemy-docker -f Dockerfile.dev  .
 
 script:
-  - docker run rkshjoshi/udemy-docker npm run test -- --coverage
+  - docker run -e CI=true rkshjoshi/udemy-docker npm run test
